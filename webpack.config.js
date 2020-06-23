@@ -16,6 +16,9 @@ module.exports = {
       chunkFilename: 'css/[id].[hash].css'
     })
   ],
+  devServer: {
+    historyApiFallback: true
+  },
   module: {
     rules: [
       {
