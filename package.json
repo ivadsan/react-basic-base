@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --mode production",
-    "dev": "webpack-dev-server",
+    "build": "webpack --env.NODE_ENV=production --mode production",
+    "dev": "webpack-dev-server --env.NODE_ENV=development",
     "lint": "standard",
     "lint:fix": "standard --fix",
     "start": "serve ./dist -s -p ${PORT:-4000}"
@@ -21,6 +21,7 @@
     "@babel/preset-react": "^7.10.1",
     "babel-loader": "^8.1.0",
     "css-loader": "3.5.3",
+    "dotenv-webpack": "^2.0.0",
     "file-loader": "^6.0.0",
     "html-webpack-plugin": "4.3.0",
     "husky": "^4.2.5",
